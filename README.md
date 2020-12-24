@@ -1,24 +1,29 @@
 # Annotation tool for YOLO
 Instructions -
 
-For python3 users in main.py replace the 10th and 11th line with-
+Find the dataset corresponding to the number assigned above from this link.
 
-"import tkinter
-
-from tkinter import *
-
-import tkinter.messagebox"
+Clone this repo (or download it if cloning doesn’t work).
 
 Place the images which are to be labelled in "Images/001/" folder.
 
 Please do not change the names of the folder, the variables in the code are adjusted accordingly.
 
-First run the main.py file. A new window would appear which will ask for the Image directory enter 001 for that, then start your work.
+First run the main.py file. A new window would appear which will ask for the Image directory enter 001 for that, then click on load, then start your work.
 
+Note that you have to annotate the “first 3 T-shapes visible in image”, that is 3 bounding boxes per image. And then click next. And do the same for subsequent images.
 
+Once you're done with annotation then run convert.py. Then rename the “001s” folder to “<number>L” (ex : “6L”) and add it to the same drive folder.
 
-Like try to minimize the irrelevant part. 
+After running main.py if it shows an error “No module named tkinter”, run the following.
 
-After you are done with all images, then finally run convert.py
+$ sudo apt-get install python3-tk
 
-And upload the txt files in Lables/001s not Lables/001.
+For python3 users in main.py replace the 10th and 11th line with-
+
+import tkinter
+
+from tkinter import *
+
+import tkinter.messagebox
+
